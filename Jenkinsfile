@@ -30,12 +30,9 @@ date +%s'''
     }
     stage('Run script') {
       steps {
-        script {
-          step("MyStep") {
-            echo 'This is a test'
-          }
-        }
-        
+        sh '''pwd
+uname -a
+'''
       }
     }
   }
