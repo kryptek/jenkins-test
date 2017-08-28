@@ -7,21 +7,21 @@ pipeline {
           "Provision Stack": {
             sh '''uptime
 date +%s
-sleep 60
+sleep 5
 date +%s'''
             
           },
           "Provision Stack2": {
             sh '''uptime
 date +%s
-sleep 60
+sleep 5
 date +%s'''
             
           },
           "Provision Stack3": {
             sh '''uptime
 date +%s
-sleep 60
+sleep 5
 date +%s'''
             
           }
