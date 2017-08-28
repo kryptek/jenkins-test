@@ -30,8 +30,12 @@ date +%s'''
     }
     stage('Run script') {
       steps {
-        load '/Users/aamoreno/test.groovy'
-        sh 'uname -a'
+        script {
+          step("MyStep") {
+            echo 'This is a test'
+          }
+        }
+        
       }
     }
   }
