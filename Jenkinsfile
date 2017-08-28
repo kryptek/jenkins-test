@@ -32,7 +32,14 @@ date +%s'''
       steps {
         script {
           script {
-            echo "Fuck you"
+            
+            def tests = ['a', 'b', 'c']
+            for (int i = 0; i < tests.length; i++) {
+              stage("Test ${tests[i]}") {
+                sh 'pwd'
+              }
+            }
+            
           }
         }
         
