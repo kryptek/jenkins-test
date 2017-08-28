@@ -30,9 +30,23 @@ date +%s'''
     }
     stage('Run script') {
       steps {
-        sh '''pwd
+        parallel(
+          "Run script": {
+            sh '''pwd
 uname -a
 '''
+            
+          },
+          "Eval?": {
+            script {
+              if (true) {
+                this.binding.variables.each {k,v -> println "$k = $v"}
+              }
+            }
+            
+            
+          }
+        )
       }
     }
   }
