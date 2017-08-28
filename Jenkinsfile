@@ -5,15 +5,15 @@ pipeline {
       steps {
         sh '''uptime
 date +%s
-sleep 10
+sleep 60
 date +%s'''
         sh '''uptime
 date +%s
-sleep 10
+sleep 60
 date +%s'''
         sh '''uptime
 date +%s
-sleep 10
+sleep 60
 date +%s'''
       }
     }
