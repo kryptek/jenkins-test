@@ -3,18 +3,29 @@ pipeline {
   stages {
     stage('Provision Stack') {
       steps {
-        sh '''uptime
+        parallel(
+          "Provision Stack": {
+            sh '''uptime
 date +%s
 sleep 60
 date +%s'''
-        sh '''uptime
+            
+          },
+          "Provision Stack2": {
+            sh '''uptime
 date +%s
 sleep 60
 date +%s'''
-        sh '''uptime
+            
+          },
+          "Provision Stack3": {
+            sh '''uptime
 date +%s
 sleep 60
 date +%s'''
+            
+          }
+        )
       }
     }
   }
