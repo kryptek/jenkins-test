@@ -28,25 +28,14 @@ date +%s'''
         )
       }
     }
-    stage('Run script') {
+    stage('Runnit') {
       steps {
-        parallel(
-          "Run script": {
-            sh '''pwd
-uname -a
-'''
-            
-          },
-          "Eval?": {
-            script {
-              if (true) {
-                this.binding.variables.each {k,v -> println "$k = $v"}
-              }
-            }
-            
-            
+        script {
+          script {
+            echo "Fuck you"
           }
-        )
+        }
+        
       }
     }
   }
