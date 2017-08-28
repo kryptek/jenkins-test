@@ -4,6 +4,8 @@ pipeline {
     stage('Provision Stack') {
       steps {
         sh 'uptime'
+        sh 'uptime'
+        sh 'uptime'
       }
     }
   }
